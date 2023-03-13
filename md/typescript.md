@@ -6,7 +6,7 @@ yarn init
 yarn add --dev typescript
 ```
 
-```
+```ts
 # tsconfig.json
 {
   "compilerOptions": {
@@ -26,7 +26,7 @@ yarn add --dev typescript
 }
 ```
 
-```
+```ts
 # package.json
 {
   "name": "name",
