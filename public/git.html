@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chkkn notes</title>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+<body>
+  <a href="/">back</a>
+  <div class="markdown-body">
+    <h1>Git</h1>
+<pre class="hljs"><code>git init
+git add .
+git commit -m &quot;First commit&quot;
+</code></pre>
+<pre class="hljs"><code># remove .DS_Store file from GitHub that MAC OS X creates
+
+# find and remove .DS_Store
+find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+
+# create .gitignore file, if needed
+touch .gitignore
+echo .DS_Store &gt; .gitignore
+
+# push changes to GitHub
+git add .gitignore
+git commit -m '.DS_Store removed'
+git push origin master
+
+</code></pre>
+<pre class="hljs"><code># Create a new branch from the top of the main branch.
+git checkout -b my-feature-branch main
+
+</code></pre>
+<pre class="hljs"><code># Delete Local branch
+git branch -d &lt;branchName&gt;
+git branch -D &lt;branchName&gt;
+
+</code></pre>
+<pre class="hljs"><code># Delete Remote Branch
+git push origin --delete &lt;branchName&gt;
+
+</code></pre>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
