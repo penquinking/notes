@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chkkn notes</title>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+<body>
+  <a href="/">back</a>
+  <div class="markdown-body">
+    <h1>Typescript</h1>
+<pre class="hljs"><code># Start a typescript project
+yarn init
+yarn add --dev typescript
+</code></pre>
+<pre class="hljs"><code># tsconfig.json
+{
+  &quot;compilerOptions&quot;: {
+    &quot;module&quot;: &quot;CommonJS&quot;,
+    &quot;target&quot;: &quot;ES2022&quot;,
+    &quot;noImplicitAny&quot;: true,
+    &quot;preserveConstEnums&quot;: true,
+    &quot;outDir&quot;: &quot;./built&quot;,
+    &quot;sourceMap&quot;: false
+  },
+  &quot;include&quot;: [
+    &quot;src/**/*&quot;
+  ],
+  &quot;exclude&quot;: [
+    &quot;node_modules&quot;,
+  ]
+}
+</code></pre>
+<pre class="hljs"><code># package.json
+{
+  &quot;name&quot;: &quot;name&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;description&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;author&quot;: &quot;parker901&quot;,
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;scripts&quot;: {
+    &quot;compile&quot;: &quot;tsc&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;typescript&quot;: &quot;^4.7.4&quot;
+  }
+}
+</code></pre>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
