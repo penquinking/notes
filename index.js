@@ -77,6 +77,10 @@ function createIndexHtml(renderMdFiles){
     </head>
     <body>
       <h2>notes</h2>
+      <form>
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+      </form>
         ${links}
     </body>
     </html>`;
