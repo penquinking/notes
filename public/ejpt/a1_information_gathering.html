@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+<body>
+  <a href="/">back</a>
+  <div class="markdown-body">
+    <h1>Information Gathering</h1>
+<h2>Passive Information Gathering</h2>
+<h3>Website Recon &amp; Foot printing</h3>
+<p>What to look for:</p>
+<ul>
+<li>IP addresses</li>
+<li>Directories hidden from search engine</li>
+<li>Names</li>
+<li>Email addresses</li>
+<li>Phone Numbers</li>
+<li>Physical Addresses</li>
+<li>Web technologies used</li>
+</ul>
+<p><strong>DNS lookup</strong><br>
+<code>host hackersploit.com</code></p>
+<p><strong>robot.txt</strong><br>
+Specifying folders or files that should not be indexed by search engine.</p>
+<p><strong>sitemap.xml</strong><br>
+File in xml that is used to provide search engine and organised way to index a web page. Sitemap can sometimes reveal links that is not presented on the main web page.</p>
+<p><strong>Web technology footprintin</strong></p>
+<ul>
+<li>builtwith: technology profiler, what web technology is running on the website</li>
+<li>Wappalyzer: technology profiler</li>
+<li>kali's <code>whatweb</code></li>
+</ul>
+<p><strong>Downloading a website</strong><br>
+<a href="https://httrack.com">https://httrack.com</a> - useful to analyse source code of the website.</p>
+<h3>Whois Enumeration</h3>
+<p>Whois lookup - getting information about a domain. ls
+Information to look for:</p>
+<ul>
+<li>Name Server</li>
+<li>Owner personal details - Registrar (Most case information will be redacted)
+e.g. <code>whois zonetransfer.me</code> or <code>whois 172.67.155.53</code> or <a href="https://whois.org">https://whois.org</a></li>
+</ul>
+<h3>Footprinting with Netcraft</h3>
+<p>Use to gather information about the target domain</p>
+<h3>DNS Recon</h3>
+<h3>WAF with wafwoof</h3>
+<h3>Subdomain Enumeration with Sublist3r</h3>
+<h3>Google Dorks</h3>
+<h3>Email Harvesting with theHarvester</h3>
+<h3>Leaked Password Databases</h3>
+<h2>Active Information Gathering</h2>
+<h3>DNS Zone Transfers</h3>
+<h3>Host Discovery with Nmap</h3>
+<h3>Port Scanning with Nmap</h3>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
