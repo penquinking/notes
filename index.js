@@ -71,7 +71,9 @@ function createIndexHtml(renderMdFiles){
         links += `<a href="${hyperlink}">${hyperlinkText}</a><br/>`;
     });
 
-    const html = `<html>
+    const html = `
+    <!DOCTYPE html>
+    <html>
     <head>
       <title>Chkkn notes</title>
     </head>
@@ -79,9 +81,13 @@ function createIndexHtml(renderMdFiles){
       <h2>notes</h2>
       <form>
         <input type="text" placeholder="Search...">
-        <button type="submit">Search</button>
+        <button type="submit">Search</button><br>
+        <select id="search-results"></select>
       </form>
+
         ${links}
+      <script src="https://unpkg.com/fuse.js/dist/fuse.min.js"></script>
+      <script src="fuzzy.js"></script>
     </body>
     </html>`;
     
@@ -91,12 +97,26 @@ function createIndexHtml(renderMdFiles){
     });
 }
 
+function copyFuzzyJs(){
+  // Construct the source and destination file paths
+  const sourceFilePath = path.join(__dirname, 'fuzzy.js');
+  const destFilePath = path.join(__dirname, 'public', 'fuzzy.js');
+
+  // Copy the file to the public directory
+  fs.copyFile(sourceFilePath, destFilePath, (err) => {
+    if (err) {
+      console.error(`Failed to copy file: ${err}`);
+      return;
+    }
+  });
+}
   
 function main() {
   const directoryPath = 'md';
   const mdFiles = searchForMdFiles(directoryPath);
   const renderedFiles = renderMdFiles(mdFiles);
   createIndexHtml(renderedFiles);
+  copyFuzzyJs();
 }
 
 main();

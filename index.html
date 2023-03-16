@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Fuzzy Search</title>
+</head>
+<body>
+    <form>
+        <label for="search-input">Search:</label>
+        <input type="text" id="search-input" name="search-input" autocomplete="off">
+        <div id="search-results"></div>
+    </form>
+
+    <script>
+        const data = [
+            "appsec/broken_authorisation",
+            "appsec/broken_cryptography",
+            "ejpt/a1_information_gathering",
+            "ejpt/a2_footprinting_scanning",
+            "git",
+            "nodejs",
+            "typescript"
+        ];
+
+        function levenshteinDistance(a, b) {
+            const matrix = [];
+
+            for (let i = 0; i <= b.length; i++) {
+                matrix[i] = [i];
+            }
+
+            for (let j = 0; j <= a.length; j++) {
+                matrix[0][j] = j;
+            }
+
+            for (let i = 1; i <= b.length; i++) {
+                for (let j = 1; j <= a.length; j++) {
+                if (b.charAt(i - 1) === a.charAt(j - 1)) {
+                    matrix[i][j] = matrix[i - 1][j - 1];
+                } else {
+                    const deletion = matrix[i - 1][j] + 1;
+                    const insertion = matrix[i][j - 1] + 1;
+                    const substitution = matrix[i - 1][j - 1] + 1;
+                    matrix[i][j] = Math.min(deletion, insertion, substitution);
+                }
+                }
+            }
+
+            return matrix[b.length][a.length];
+        }
+
+
+        function fuzzySearch(query) {
+            const results = [];
+
+            if (query.length >= 3) {
+                for (const item of data) {
+                const distance = levenshteinDistance(item, query);
+                if (distance <= 3) {
+                    results.push(item);
+                }
+                }
+            }
+
+            return results;
+        }
+
+        const searchInput = document.getElementById("search-input");
+        const searchResults = document.getElementById("search-results");
+
+        searchInput.addEventListener("input", function() {
+            const query = searchInput.value.trim();
+
+            if (query.length > 0) {
+                const results = fuzzySearch(query);
+
+                if (results.length > 0) {
+                    searchResults.innerHTML = results.map(result => {
+                        return `<a href="${result}.html">${result}</a>`;
+                    }).join("");
+                } else {
+                    searchResults.innerHTML = "<p>No results found.</p>";
+                }
+            } else {
+                searchResults.innerHTML = "";
+            }
+        });
+    </script>
+</body>
+</html>
