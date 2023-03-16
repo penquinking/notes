@@ -9,6 +9,10 @@
 
 ## Inventory and Configuration Management
 
+- deployment tools for creation and decommisioning AWS resources
+- identitfy AWS resources, track and manage.
+-
+
 ## Data Encryption
 
 ## Identity and Access Control
