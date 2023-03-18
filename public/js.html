@@ -61,6 +61,22 @@ language.substring(1,4); // &quot;ava&quot;
 language.substring(4); //&quot;Script&quot;
 </code></pre>
 <p><code>.substr</code> is deprecated.</p>
+<h4>Plus operator</h4>
+<pre class="hljs"><code>&quot;Hello&quot; + &quot;World&quot; // &quot;HelloWorld&quot;
+</code></pre>
+<pre class="hljs"><code>let prefix = &quot;Mrs.&quot;;
+let name = &quot;Sam&quot;;
+let string = prefix + &quot; &quot; + name; // &quot;Mrs. Sam&quot;
+</code></pre>
+<pre class="hljs"><code>let name = &quot;Sam&quot;;
+name = name + &quot; Blue&quot;;
+console.log(name); // &quot;Sam Blue&quot;
+
+# same as
+name += &quot; Blue&quot;;
+</code></pre>
+<h4>Template strings</h4>
+<p>Template strings support interpolation.</p>
 
   </div>
 

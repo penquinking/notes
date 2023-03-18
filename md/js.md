@@ -69,3 +69,28 @@ language.substring(4); //"Script"
 ```
 
 `.substr` is deprecated.
+
+#### Plus operator
+
+```
+"Hello" + "World" // "HelloWorld"
+```
+
+```
+let prefix = "Mrs.";
+let name = "Sam";
+let string = prefix + " " + name; // "Mrs. Sam"
+```
+
+```
+let name = "Sam";
+name = name + " Blue";
+console.log(name); // "Sam Blue"
+
+# same as
+name += " Blue";
+```
+
+#### Template strings
+
+Template strings support interpolation.
