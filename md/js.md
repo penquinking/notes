@@ -55,3 +55,17 @@ language.at(1); // "a"
 language.at(-1); // "t"
 language.at(-2); // "p"
 ```
+
+#### Substrings
+
+Substrings is a portion of a string e.g. rain in brain.
+
+```
+const language = "JavaScript";
+language.substring(1,4); // "ava"
+
+# indexEnd parameter is optional.
+language.substring(4); //"Script"
+```
+
+`.substr` is deprecated.
