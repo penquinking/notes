@@ -16,7 +16,7 @@ const displayResults = (results) => {
     link.textContent = result.item.textContent;
     searchResults.appendChild(link);
   });
-};
+}; 
 
 searchInput.addEventListener('input', (event) => {
   event.preventDefault();
