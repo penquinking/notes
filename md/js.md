@@ -93,4 +93,18 @@ name += " Blue";
 
 #### Template strings
 
-Template strings support interpolation.
+Template strings support interpolation, means you can write variable in your string.
+
+```
+`This is a template string`
+
+# Multiline strings
+let text = `This is a multiline
+string that
+just works!`
+```
+
+```
+let language = "JavaScript";
+`I am learning ${language}`;
+```
