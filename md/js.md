@@ -239,3 +239,12 @@ function canVote(age) {
 ```
 
 Note: Use triple equal `===` instead of `==`. With `==` js will try to convert both values into the same data type.
+
+#### Returning booleans
+
+```
+# Refactor boolean
+function isPassing(grade) {
+    return grade >= 10;
+}
+```
