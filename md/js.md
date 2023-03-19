@@ -317,3 +317,19 @@ console.log(numbers); // [10] (still an array but content changed)
 numbers.push(20); // returns 2 (new length of array)
 console.log(numbers); // [10, 20] (still an array but content changed)
 ```
+
+#### Array forEach
+
+```
+# Looping through an array
+
+const grades = [10, 8, 13];
+
+grades.forEach(function(grade) {
+    // do something with individual grade
+    console.log(grade);
+});
+```
+
+`forEach` takes a callback function as an argument which is called once for each element in an array.
+The callback function here it not actually executing the function but is defining how the function should behave if it's executed. The function definition is passed to `forEach` function. In this case `grade` is the function definition.

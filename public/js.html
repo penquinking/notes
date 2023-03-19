@@ -240,6 +240,18 @@ console.log(numbers); // [10] (still an array but content changed)
 numbers.push(20); // returns 2 (new length of array)
 console.log(numbers); // [10, 20] (still an array but content changed)
 </code></pre>
+<h4>Array forEach</h4>
+<pre class="hljs"><code># Looping through an array
+
+const grades = [10, 8, 13];
+
+grades.forEach(function(grade) {
+    // do something with individual grade
+    console.log(grade);
+});
+</code></pre>
+<p><code>forEach</code> takes a callback function as an argument which is called once for each element in an array.
+The callback function here it not actually executing the function but is defining how the function should behave if it's executed. The function definition is passed to <code>forEach</code> function. In this case <code>grade</code> is the function definition.</p>
 
   </div>
 
