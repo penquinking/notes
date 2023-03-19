@@ -489,3 +489,24 @@ const sum = (a, b) => {
 ```
 
 Functions are not deprecated. You can use functions but arrow functions is preferred because of their benefits.
+
+#### Arrow function forEach
+
+```
+grades.forEach((grade) => {
+    console.log(grade);
+});
+
+# if it's one parameter you can drop ()
+grades.forEach(grade => {
+    console.log(grade);
+});
+```
+
+#### Arrow function array filter()
+
+```
+const numbersAboveTen = numbers.filter((number) => {
+    return number > 10;
+});
+```
