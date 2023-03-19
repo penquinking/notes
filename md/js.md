@@ -468,4 +468,8 @@ addOne(); // 1
 
 #### Function to arrow functions
 
-node
+Benefits of arrow function:
+
+1. Shorter to write.
+2. Uses lexical scope.
+3. Benefit from implicit return.
