@@ -534,3 +534,21 @@ const isLegal = (age) => age >= 18;
 
 const isLegal = age => age >= 18;
 ```
+
+#### Array filter(callback)
+
+```
+const numbersAboveTen = numbers.filter(number => number > 10);
+```
+
+#### Array find(callback)
+
+```
+const result = names.find(name => name === "Alex");
+```
+
+#### Array map(callback)
+
+```
+const doubled = numbers.map(number => number * 2);
+```
