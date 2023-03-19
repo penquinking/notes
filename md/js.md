@@ -154,3 +154,20 @@ Number.parseInt(str, 10); //42
 ```
 
 `parseInt()` works the same but use the modern `Number.parseInt`
+
+#### Operations
+
+```
+8%2; // Devision remainder is 0
+7%2 // Devision remainder is 1
+```
+
+```
+Math.round(2.6); // 3
+Math.floor(2.6); // 2
+Math.ceil(2.6); // 3
+
+Math.round(2.5); // 3
+Math.floor(2.5); // 2
+Math.ceil(2.5); // 3
+```
