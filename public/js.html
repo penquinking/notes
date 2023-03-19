@@ -295,6 +295,29 @@ console.log(result); // &quot;Alex&quot;
 <li><code>.filter()</code> always return an array.</li>
 <li><code>.find()</code> returns first array item that matches.</li>
 </ol>
+<h4>Array map</h4>
+<p><code>.map(callback)</code> <strong>transform</strong> an array into another.</p>
+<pre class="hljs"><code>const numbers = [4, 2, 5, 8];
+
+const doubled = numbers.map(function(number) {
+    return number * 2;
+});
+console.log(doubled); // [8, 4, 10, 16]
+</code></pre>
+<p>It will be <code>[undefined, undefined].</code> if you forget <code>return</code> in the callback function.</p>
+<h4>Array includes(item)</h4>
+<p>Method takes an item <code>true</code> if the item exists.</p>
+<pre class="hljs"><code>const groceries = [&quot;Apple&quot;, &quot;Peach&quot;, &quot;Tomato&quot;];
+
+groceries.includes(&quot;Tomato&quot;); // true
+groceries.includes(&quot;Bread&quot;); // false
+</code></pre>
+<h4>Array join(glue)</h4>
+<p>Use glue to instead seperators between items when converted to strings.</p>
+<pre class="hljs"><code>const groceries = [&quot;Apple&quot;, &quot;Peach&quot;, &quot;Tomato&quot;];
+groceries.join(&quot;; &quot;); // &quot;Apple; Peach; Tomato&quot;
+groceries.join(&quot; . &quot;); // &quot;Apple . Peach . Tomato&quot;
+</code></pre>
 
   </div>
 

@@ -389,3 +389,39 @@ The callback will stop calling once the array returns true.
 
 1. `.filter()` always return an array.
 2. `.find()` returns first array item that matches.
+
+#### Array map
+
+`.map(callback)` **transform** an array into another.
+
+```
+const numbers = [4, 2, 5, 8];
+
+const doubled = numbers.map(function(number) {
+    return number * 2;
+});
+console.log(doubled); // [8, 4, 10, 16]
+```
+
+It will be `[undefined, undefined].` if you forget `return` in the callback function.
+
+#### Array includes(item)
+
+Method takes an item `true` if the item exists.
+
+```
+const groceries = ["Apple", "Peach", "Tomato"];
+
+groceries.includes("Tomato"); // true
+groceries.includes("Bread"); // false
+```
+
+#### Array join(glue)
+
+Use glue to instead seperators between items when converted to strings.
+
+```
+const groceries = ["Apple", "Peach", "Tomato"];
+groceries.join("; "); // "Apple; Peach; Tomato"
+groceries.join(" . "); // "Apple . Peach . Tomato"
+```
