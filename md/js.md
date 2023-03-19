@@ -418,10 +418,52 @@ groceries.includes("Bread"); // false
 
 #### Array join(glue)
 
-Use glue to instead seperators between items when converted to strings.
+Use glue to insert separators between items when converted to strings.
 
 ```
 const groceries = ["Apple", "Peach", "Tomato"];
 groceries.join("; "); // "Apple; Peach; Tomato"
 groceries.join(" . "); // "Apple . Peach . Tomato"
 ```
+
+### Objects
+
+An object is a data type that allows you to group several variables together into one variable that contains keys and values.
+
+```
+const user = {
+    id: 1,
+    firstName: "Sam",
+    lastName: "Doe",
+    age: 20
+};
+
+user.id; // 1
+user.firstName; // "Sam"
+user.isAdmin; // undefined (property does not exist)
+
+# Updating the property value
+user.age = user.age + 1;
+
+
+```
+
+### Arrow functions
+
+#### Default parameters
+
+In Js if an argument is not passed in the function parameters the code will not fail but instead passed as `undefined`.
+
+```
+function addOne(number = 0) {
+    return number + 1;
+}
+
+addOne(2); // 3
+addOne(5); // 6
+addOne(); // 1
+
+# When calling the function without an argument the default value is set to 0.
+```
+
+#### Function to arrow functions
