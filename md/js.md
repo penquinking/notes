@@ -108,3 +108,38 @@ just works!`
 let language = "JavaScript";
 `I am learning ${language}`;
 ```
+
+### Numbers
+
+```
+Example of numbers in JS
+1
+2
+-5
+3.5
+2000
+2021
+-23.51
+```
+
+```
+# Using numeric separator (_) makes it easier to read
+let nb = 1_000; // equivalent to 1000
+let nc = 1_000_000; // 1 million
+```
+
+```
+# number to string
+let answer = 42;
+answer.toString();
+```
+
+#### NaN
+
+Not a number.
+
+```
+"abc" * 4; // NaN
+
+# Sign something wrong with the code e.g. not converting string to a number
+```
