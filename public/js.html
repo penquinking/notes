@@ -270,6 +270,17 @@ function logUserIds(userIds) {
     return true; // ✅ return from the logUserIds function
 }
 </code></pre>
+<h4>Array filter</h4>
+<pre class="hljs"><code># Returns another array with some items of the original array
+
+const numbers = [9, 5, 14, 3, 11];
+
+const numbersAboveTen = numbers.filter(function(number) {
+    return number &gt; 10;
+});
+console.log(numbersAboveTen); // [14, 11]
+</code></pre>
+<p>The <code>.filter()</code> method expects a callback. JS takes the callback and call it for every singel item in the array.</p>
 
   </div>
 

@@ -356,3 +356,18 @@ function logUserIds(userIds) {
     return true; // ✅ return from the logUserIds function
 }
 ```
+
+#### Array filter
+
+```
+# Returns another array with some items of the original array
+
+const numbers = [9, 5, 14, 3, 11];
+
+const numbersAboveTen = numbers.filter(function(number) {
+    return number > 10;
+});
+console.log(numbersAboveTen); // [14, 11]
+```
+
+The `.filter()` method expects a callback. JS takes the callback and call it for every singel item in the array.
