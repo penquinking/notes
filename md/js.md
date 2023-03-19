@@ -371,3 +371,21 @@ console.log(numbersAboveTen); // [14, 11]
 ```
 
 The `.filter()` method expects a callback. JS takes the callback and call it for every singel item in the array.
+
+#### Array find
+
+```
+let names = ["Sam", "Alex", "Charlie"];
+
+let result = names.find(function(name) {
+  return name === "Alex";
+});
+console.log(result); // "Alex"
+```
+
+The callback will stop calling once the array returns true.
+
+#### .filter() vs .find()
+
+1. `.filter()` always return an array.
+2. `.find()` returns first array item that matches.

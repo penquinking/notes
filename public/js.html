@@ -281,6 +281,20 @@ const numbersAboveTen = numbers.filter(function(number) {
 console.log(numbersAboveTen); // [14, 11]
 </code></pre>
 <p>The <code>.filter()</code> method expects a callback. JS takes the callback and call it for every singel item in the array.</p>
+<h4>Array find</h4>
+<pre class="hljs"><code>let names = [&quot;Sam&quot;, &quot;Alex&quot;, &quot;Charlie&quot;];
+
+let result = names.find(function(name) {
+  return name === &quot;Alex&quot;;
+});
+console.log(result); // &quot;Alex&quot;
+</code></pre>
+<p>The callback will stop calling once the array returns true.</p>
+<h4>.filter() vs .find()</h4>
+<ol>
+<li><code>.filter()</code> always return an array.</li>
+<li><code>.find()</code> returns first array item that matches.</li>
+</ol>
 
   </div>
 
