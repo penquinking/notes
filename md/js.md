@@ -176,6 +176,7 @@ Math.ceil(2.5); // 3
 
 ```
 # let
+
 let language = "C++";
 language = "JavaScript";
 
@@ -185,6 +186,7 @@ sum += 1;
 
 ```
 # const cannot be re-assigned
+
 const language = "C++";
 language = "Python" // Type error
 ```
@@ -230,6 +232,7 @@ This can be enabled on your code editor.
 
 ```
 # Dropping the else
+
 function canVote(age) {
     if (age >= 18) {
         return true;
@@ -244,7 +247,24 @@ Note: Use triple equal `===` instead of `==`. With `==` js will try to convert b
 
 ```
 # Refactor boolean
+
 function isPassing(grade) {
     return grade >= 10;
 }
+```
+
+#### Even & Odd
+
+```
+// even numbers
+4 % 2 // 0
+6 % 2 // 0
+8 % 2 // 0
+10 % 2 // 0
+
+// odd numbers
+3 % 2 // 1
+5 % 2 // 1
+7 % 2 // 1
+9 % 2 // 1
 ```

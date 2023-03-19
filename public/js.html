@@ -133,6 +133,7 @@ Math.ceil(2.5); // 3
 </code></pre>
 <h3>Variables</h3>
 <pre class="hljs"><code># let
+
 let language = &quot;C++&quot;;
 language = &quot;JavaScript&quot;;
 
@@ -140,6 +141,7 @@ let sum = 0;
 sum += 1;
 </code></pre>
 <pre class="hljs"><code># const cannot be re-assigned
+
 const language = &quot;C++&quot;;
 language = &quot;Python&quot; // Type error
 </code></pre>
@@ -172,6 +174,7 @@ if (grade &gt; 10) {
 </code></pre>
 <h4>Advanced if</h4>
 <pre class="hljs"><code># Dropping the else
+
 function canVote(age) {
     if (age &gt;= 18) {
         return true;
@@ -182,9 +185,23 @@ function canVote(age) {
 <p>Note: Use triple equal <code>===</code> instead of <code>==</code>. With <code>==</code> js will try to convert both values into the same data type.</p>
 <h4>Returning booleans</h4>
 <pre class="hljs"><code># Refactor boolean
+
 function isPassing(grade) {
     return grade &gt;= 10;
 }
+</code></pre>
+<h4>Even &amp; Odd</h4>
+<pre class="hljs"><code>// even numbers
+4 % 2 // 0
+6 % 2 // 0
+8 % 2 // 0
+10 % 2 // 0
+
+// odd numbers
+3 % 2 // 1
+5 % 2 // 1
+7 % 2 // 1
+9 % 2 // 1
 </code></pre>
 
   </div>
