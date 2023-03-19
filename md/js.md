@@ -225,3 +225,17 @@ This can be enabled on your code editor.
 === for ===
 !== for !==
 ```
+
+#### Advanced if
+
+```
+# Dropping the else
+function canVote(age) {
+    if (age >= 18) {
+        return true;
+    }
+    return false;
+}
+```
+
+Note: Use triple equal `===` instead of `==`. With `==` js will try to convert both values into the same data type.
