@@ -252,6 +252,24 @@ grades.forEach(function(grade) {
 </code></pre>
 <p><code>forEach</code> takes a callback function as an argument which is called once for each element in an array.
 The callback function here it not actually executing the function but is defining how the function should behave if it's executed. The function definition is passed to <code>forEach</code> function. In this case <code>grade</code> is the function definition.</p>
+<h4>Naming variables</h4>
+<p>Use <strong>plural</strong> for <strong>array</strong> and <strong>singular</strong> for <strong>item</strong> of the array.<br>
+E.g.</p>
+<ul>
+<li>grades =&gt; item is <strong>grade</strong></li>
+<li>people =&gt; item is <strong>person</strong></li>
+</ul>
+<h4>Returning from loop</h4>
+<p>In the function that calls <code>foreach</code> there are two 2 functions. The <code>return</code> should be outside the <code>foreach</code> function. Returning inside the function is not useful because it's going to return inside the callback function and <code>.foreach()</code> will always return <code>undefined</code>.</p>
+<pre class="hljs"><code># Correct return
+
+function logUserIds(userIds) {
+    userIds.forEach(function(userId) {
+        console.log(userId);
+    });
+    return true; // ✅ return from the logUserIds function
+}
+</code></pre>
 
   </div>
 

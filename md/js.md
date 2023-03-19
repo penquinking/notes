@@ -333,3 +333,26 @@ grades.forEach(function(grade) {
 
 `forEach` takes a callback function as an argument which is called once for each element in an array.
 The callback function here it not actually executing the function but is defining how the function should behave if it's executed. The function definition is passed to `forEach` function. In this case `grade` is the function definition.
+
+#### Naming variables
+
+Use **plural** for **array** and **singular** for **item** of the array.  
+E.g.
+
+- grades => item is **grade**
+- people => item is **person**
+
+#### Returning from loop
+
+In the function that calls `foreach` there are two 2 functions. The `return` should be outside the `foreach` function. Returning inside the function is not useful because it's going to return inside the callback function and `.foreach()` will always return `undefined`.
+
+```
+# Correct return
+
+function logUserIds(userIds) {
+    userIds.forEach(function(userId) {
+        console.log(userId);
+    });
+    return true; // ✅ return from the logUserIds function
+}
+```
