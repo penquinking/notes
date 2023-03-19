@@ -510,3 +510,27 @@ const numbersAboveTen = numbers.filter((number) => {
     return number > 10;
 });
 ```
+
+### Implicit return
+
+When you forget to write `return` you'll get an implicit `return undefined`. Implicit it means it is refer to something suggested or understood without directly stating.
+
+In JS under specific conditions, implicit return will work:
+
+1. Must be an arrow function.
+2. Function body must be **one statement**. Curly braces can be removed.
+3. `Return` must be removed because its one statement.
+
+```
+const isLegal = (age) => {
+    return age >= 18;
+}
+
+# Removing curly brackets & return
+
+const isLegal = (age) => age >= 18;
+
+# Removing parentheses
+
+const isLegal = age => age >= 18;
+```

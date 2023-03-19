@@ -384,6 +384,26 @@ grades.forEach(grade =&gt; {
     return number &gt; 10;
 });
 </code></pre>
+<h3>Implicit return</h3>
+<p>When you forget to write <code>return</code> you'll get an implicit <code>return undefined</code>. Implicit it means it is refer to something suggested or understood without directly stating.</p>
+<p>In JS under specific conditions, implicit return will work:</p>
+<ol>
+<li>Must be an arrow function.</li>
+<li>Function body must be <strong>one statement</strong>. Curly braces can be removed.</li>
+<li><code>Return</code> must be removed because its one statement.</li>
+</ol>
+<pre class="hljs"><code>const isLegal = (age) =&gt; {
+    return age &gt;= 18;
+}
+
+# Removing curly brackets &amp; return
+
+const isLegal = (age) =&gt; age &gt;= 18;
+
+# Removing parentheses
+
+const isLegal = age =&gt; age &gt;= 18;
+</code></pre>
 
   </div>
 
