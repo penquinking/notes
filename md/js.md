@@ -171,3 +171,22 @@ Math.round(2.5); // 3
 Math.floor(2.5); // 2
 Math.ceil(2.5); // 3
 ```
+
+### Variables
+
+```
+# let
+let language = "C++";
+language = "JavaScript";
+
+let sum = 0;
+sum += 1;
+```
+
+```
+# const cannot be re-assigned
+const language = "C++";
+language = "Python" // Type error
+```
+
+General rule is always go with `const` until you realised you need to re-assigned. `var` can still be used but its discourage to use.
