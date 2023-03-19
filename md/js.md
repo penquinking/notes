@@ -190,3 +190,38 @@ language = "Python" // Type error
 ```
 
 General rule is always go with `const` until you realised you need to re-assigned. `var` can still be used but its discourage to use.
+
+### Conditions
+
+```
+const grade = 3;
+
+if (grade >= 10) {
+    console.log("Passing grade");
+} else {
+    console.log("Failing grade");
+}
+```
+
+```
+const grade = 10;
+
+if (grade > 10) {
+    console.log("Passing grade");
+} else if (grade === 10) {
+    console.log("Passing on the limit");
+} else {
+    console.log("Failing grade");
+}
+```
+
+#### Ligatures
+
+This can be enabled on your code editor.
+
+```
+>= for >=
+<= for <=
+=== for ===
+!== for !==
+```

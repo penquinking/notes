@@ -144,6 +144,32 @@ const language = &quot;C++&quot;;
 language = &quot;Python&quot; // Type error
 </code></pre>
 <p>General rule is always go with <code>const</code> until you realised you need to re-assigned. <code>var</code> can still be used but its discourage to use.</p>
+<h3>Conditions</h3>
+<pre class="hljs"><code>const grade = 3;
+
+if (grade &gt;= 10) {
+    console.log(&quot;Passing grade&quot;);
+} else {
+    console.log(&quot;Failing grade&quot;);
+}
+</code></pre>
+<pre class="hljs"><code>const grade = 10;
+
+if (grade &gt; 10) {
+    console.log(&quot;Passing grade&quot;);
+} else if (grade === 10) {
+    console.log(&quot;Passing on the limit&quot;);
+} else {
+    console.log(&quot;Failing grade&quot;);
+}
+</code></pre>
+<h4>Ligatures</h4>
+<p>This can be enabled on your code editor.</p>
+<pre class="hljs"><code>&gt;= for &gt;=
+&lt;= for &lt;=
+=== for ===
+!== for !==
+</code></pre>
 
   </div>
 
