@@ -473,3 +473,19 @@ Benefits of arrow function:
 1. Shorter to write.
 2. Uses lexical scope.
 3. Benefit from implicit return.
+
+```
+function sum(a, b) {
+    return a + b;
+}
+
+const sum = function(a, b) {
+    return a + b;
+}
+
+const sum = (a, b) => {
+    return a + b;
+}
+```
+
+Functions are not deprecated. You can use functions but arrow functions is preferred because of their benefits.

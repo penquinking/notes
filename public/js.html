@@ -356,6 +356,19 @@ addOne(); // 1
 <li>Uses lexical scope.</li>
 <li>Benefit from implicit return.</li>
 </ol>
+<pre class="hljs"><code>function sum(a, b) {
+    return a + b;
+}
+
+const sum = function(a, b) {
+    return a + b;
+}
+
+const sum = (a, b) =&gt; {
+    return a + b;
+}
+</code></pre>
+<p>Functions are not deprecated. You can use functions but arrow functions is preferred because of their benefits.</p>
 
   </div>
 
