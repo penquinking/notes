@@ -143,3 +143,14 @@ Not a number.
 
 # Sign something wrong with the code e.g. not converting string to a number
 ```
+
+```
+# Convert string to number
+let str = "42";
+Number.parseInt(str, 10); //42
+
+# Global objecet called Number which contains method parseInt
+# Parameter 2 - radix: decimal 10, binary 2
+```
+
+`parseInt()` works the same but use the modern `Number.parseInt`
