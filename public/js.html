@@ -421,6 +421,36 @@ const numbers = [15, 10, 20];
 const someOver18 = numbers.some(number =&gt; number &gt;= 18); // true
 const someUnder10 = numbers.some(number =&gt; number &lt; 10); // false
 </code></pre>
+<h4>Deleting items</h4>
+<pre class="hljs"><code># Set length to 0 to empty array
+const items = [&quot;Pen&quot;, &quot;Paper&quot;];
+items.length = 0;
+
+console.log(items); // []
+</code></pre>
+<p>To delete specific items using splice.</p>
+<ul>
+<li>Delete first item <code>.splice(0, 1)</code>.</li>
+<li>Delete 3 elements starting from the 2nd position <code>.splice(1, 3)</code>.</li>
+<li><code>.splice(1)</code>remove all the items starting from the 2nd position.</li>
+</ul>
+<pre class="hljs"><code>const items = [&quot;Pen&quot;, &quot;Paper&quot;, &quot;Staples&quot;];
+const deletedItem = items.splice(0, 1); // removes one element at index 0
+console.log(deletedItem); // [&quot;Pen&quot;]
+
+console.log(items); // [&quot;Paper&quot;, &quot;Staples&quot;]
+</code></pre>
+<h3>Array reduce</h3>
+<p><code>reduce()</code> caculate a single value from an array it accepts a <strong>reducer</strong> which is a callback. Reduce is a generic function that will reduce an array into a single value.</p>
+<h4>Reduce: sum</h4>
+<pre class="hljs"><code># Total is the last computed value, called accumulator
+# Current is the single item in the array
+
+const sum = grades.reduce((total, current) =&gt; {
+    return total + current;
+}, 0);
+</code></pre>
+<p><code>.reducer()</code> accepts 2 parameters: <code>reducer</code> and <code>initialValue</code>. <code>initialValue</code> is the same as <code>let sum = 0</code>.</p>
 <h3>Objects</h3>
 <p>An object is a data type that allows you to group several variables together into one variable that contains keys and values.</p>
 <pre class="hljs"><code>const user = {

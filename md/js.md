@@ -560,6 +560,47 @@ const someOver18 = numbers.some(number => number >= 18); // true
 const someUnder10 = numbers.some(number => number < 10); // false
 ```
 
+#### Deleting items
+
+```
+# Set length to 0 to empty array
+const items = ["Pen", "Paper"];
+items.length = 0;
+
+console.log(items); // []
+```
+
+To delete specific items using splice.
+
+- Delete first item `.splice(0, 1)`.
+- Delete 3 elements starting from the 2nd position `.splice(1, 3)`.
+- `.splice(1)`remove all the items starting from the 2nd position.
+
+```
+const items = ["Pen", "Paper", "Staples"];
+const deletedItem = items.splice(0, 1); // removes one element at index 0
+console.log(deletedItem); // ["Pen"]
+
+console.log(items); // ["Paper", "Staples"]
+```
+
+### Array reduce
+
+`reduce()` caculate a single value from an array it accepts a **reducer** which is a callback. Reduce is a generic function that will reduce an array into a single value.
+
+#### Reduce: sum
+
+```
+# Total is the last computed value, called accumulator
+# Current is the single item in the array
+
+const sum = grades.reduce((total, current) => {
+    return total + current;
+}, 0);
+```
+
+`.reducer()` accepts 2 parameters: `reducer` and `initialValue`. `initialValue` is the same as `let sum = 0`.
+
 ### Objects
 
 An object is a data type that allows you to group several variables together into one variable that contains keys and values.
