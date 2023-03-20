@@ -87,6 +87,42 @@ just works!`
 <pre class="hljs"><code>let language = &quot;JavaScript&quot;;
 `I am learning ${language}`;
 </code></pre>
+<h4>.trim()</h4>
+<pre class="hljs"><code># Removes all leading and trailing space characters
+
+const name = &quot;  Sam Blue &quot;;
+name.trim(); // &quot;Sam Blue&quot;
+</code></pre>
+<h4>.startsWith() and .endsWith()</h4>
+<pre class="hljs"><code># Return true when substring found at the beginning
+
+const sentence = &quot;Hello there. Welcome!&quot;;
+
+sentence.startsWith(&quot;H&quot;); // true
+sentence.startsWith(&quot;Hello&quot;); // true
+sentence.startsWith(&quot;Hey&quot;); // false
+sentence.startsWith(&quot;Sam&quot;); // false
+
+# Return true when substring found at the end
+
+sentence.endsWith(&quot;.&quot;); // false
+sentence.endsWith(&quot;!&quot;); // true
+sentence.endsWith(&quot;Welcome!&quot;); // true
+sentence.endsWith(&quot;Welcome&quot;); // false
+</code></pre>
+<h4>.includes(substring)</h4>
+<pre class="hljs"><code># Return true when substring is found anywhere
+const sentence = &quot;Hello there. Welcome!&quot;;
+
+sentence.includes(&quot;there&quot;); // true
+sentence.includes(&quot;W&quot;); // true
+sentence.includes(&quot;Hello&quot;); // true
+sentence.includes(&quot;Hey&quot;); // false
+sentence.includes(&quot;Sam&quot;); // false
+sentence.includes(&quot;.&quot;); // true
+sentence.includes(&quot;!&quot;); // true
+sentence.includes(&quot;Welcome&quot;); // true
+</code></pre>
 <h3>Numbers</h3>
 <pre class="hljs"><code>Example of numbers in JS
 1
@@ -406,6 +442,10 @@ const isLegal = age =&gt; age &gt;= 18;
 </code></pre>
 <h4>Array filter(callback)</h4>
 <pre class="hljs"><code>const numbersAboveTen = numbers.filter(number =&gt; number &gt; 10);
+
+const getPositiveTemperatures = temperatures =&gt; {
+    return temperatures.filter(temperature  =&gt; temperature &gt; 0);
+}
 </code></pre>
 <h4>Array find(callback)</h4>
 <pre class="hljs"><code>const result = names.find(name =&gt; name === &quot;Alex&quot;);

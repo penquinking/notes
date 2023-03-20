@@ -109,6 +109,51 @@ let language = "JavaScript";
 `I am learning ${language}`;
 ```
 
+#### .trim()
+
+```
+# Removes all leading and trailing space characters
+
+const name = "  Sam Blue ";
+name.trim(); // "Sam Blue"
+```
+
+#### .startsWith() and .endsWith()
+
+```
+# Return true when substring found at the beginning
+
+const sentence = "Hello there. Welcome!";
+
+sentence.startsWith("H"); // true
+sentence.startsWith("Hello"); // true
+sentence.startsWith("Hey"); // false
+sentence.startsWith("Sam"); // false
+
+# Return true when substring found at the end
+
+sentence.endsWith("."); // false
+sentence.endsWith("!"); // true
+sentence.endsWith("Welcome!"); // true
+sentence.endsWith("Welcome"); // false
+```
+
+#### .includes(substring)
+
+```
+# Return true when substring is found anywhere
+const sentence = "Hello there. Welcome!";
+
+sentence.includes("there"); // true
+sentence.includes("W"); // true
+sentence.includes("Hello"); // true
+sentence.includes("Hey"); // false
+sentence.includes("Sam"); // false
+sentence.includes("."); // true
+sentence.includes("!"); // true
+sentence.includes("Welcome"); // true
+```
+
 ### Numbers
 
 ```
@@ -539,6 +584,10 @@ const isLegal = age => age >= 18;
 
 ```
 const numbersAboveTen = numbers.filter(number => number > 10);
+
+const getPositiveTemperatures = temperatures => {
+    return temperatures.filter(temperature  => temperature > 0);
+}
 ```
 
 #### Array find(callback)
