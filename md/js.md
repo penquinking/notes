@@ -154,6 +154,36 @@ sentence.includes("!"); // true
 sentence.includes("Welcome"); // true
 ```
 
+#### .split(separator)
+
+```
+# Divide string into array by spliting with separator
+
+let apps = "Calculator,Phone,Contacts";
+let appsArray = apps.split(",");
+console.log(appsArray); // ["Calculator", "Phone", "Contacts"]
+```
+
+Note: opposite of `String.split(separator)` is `Array.join(glue)`.
+
+#### String.replace(search, replace)
+
+```
+# The first occurence of `search` parameters is replaced with `replace` parameter.
+
+const message = "You are welcome.";
+message.replace(" ", "_"); // "You_are welcome."; (only the first occurrence has been replaced)
+console.log(message); // "You are welcome." (original string is not changed)
+```
+
+```
+# Work the same as replace() but will replace all occurrences.
+
+const message = "You are welcome.";
+message.replaceAll(" ", "_"); // "You_are_welcome";
+console.log(message); // "You are welcome" (original string is not changed)
+```
+
 ### Numbers
 
 ```

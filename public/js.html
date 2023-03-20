@@ -123,6 +123,27 @@ sentence.includes(&quot;.&quot;); // true
 sentence.includes(&quot;!&quot;); // true
 sentence.includes(&quot;Welcome&quot;); // true
 </code></pre>
+<h4>.split(separator)</h4>
+<pre class="hljs"><code># Divide string into array by spliting with separator
+
+let apps = &quot;Calculator,Phone,Contacts&quot;;
+let appsArray = apps.split(&quot;,&quot;);
+console.log(appsArray); // [&quot;Calculator&quot;, &quot;Phone&quot;, &quot;Contacts&quot;]
+</code></pre>
+<p>Note: opposite of <code>String.split(separator)</code> is <code>Array.join(glue)</code>.</p>
+<h4>String.replace(search, replace)</h4>
+<pre class="hljs"><code># The first occurence of `search` parameters is replaced with `replace` parameter.
+
+const message = &quot;You are welcome.&quot;;
+message.replace(&quot; &quot;, &quot;_&quot;); // &quot;You_are welcome.&quot;; (only the first occurrence has been replaced)
+console.log(message); // &quot;You are welcome.&quot; (original string is not changed)
+</code></pre>
+<pre class="hljs"><code># Work the same as replace() but will replace all occurrences.
+
+const message = &quot;You are welcome.&quot;;
+message.replaceAll(&quot; &quot;, &quot;_&quot;); // &quot;You_are_welcome&quot;;
+console.log(message); // &quot;You are welcome&quot; (original string is not changed)
+</code></pre>
 <h3>Numbers</h3>
 <pre class="hljs"><code>Example of numbers in JS
 1
