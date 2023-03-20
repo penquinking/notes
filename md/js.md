@@ -532,10 +532,32 @@ console.log(csv); // "Sam Doe, Alex Blue"
 
 ```
 # Applying to html
+
 const html = `<ul>
     ${users.map(user => `<li>${user.name}</li>`).join("")}
     </ul>`;
 console.log(html); // <ul> <li>Sam Doe</li><li>Alex Blue</li> </ul>
+```
+
+#### Array.every(callback)
+
+```
+# Return true when every number satisfy
+
+const numbers = [15, 10, 20];
+
+const allAbove10 = numbers.every(number => number >= 10); // true
+const allAbove15 = numbers.every(number => number >= 15); // false
+```
+
+#### Array.some(callback)
+
+```
+# Return true whenn at least on item satisfies the condition
+const numbers = [15, 10, 20];
+
+const someOver18 = numbers.some(number => number >= 18); // true
+const someUnder10 = numbers.some(number => number < 10); // false
 ```
 
 ### Objects

@@ -400,10 +400,26 @@ console.log(csv); // &quot;Sam Doe, Alex Blue&quot;
 
 </code></pre>
 <pre class="hljs"><code># Applying to html
+
 const html = `&lt;ul&gt;
     ${users.map(user =&gt; `&lt;li&gt;${user.name}&lt;/li&gt;`).join(&quot;&quot;)}
     &lt;/ul&gt;`;
 console.log(html); // &lt;ul&gt; &lt;li&gt;Sam Doe&lt;/li&gt;&lt;li&gt;Alex Blue&lt;/li&gt; &lt;/ul&gt;
+</code></pre>
+<h4>Array.every(callback)</h4>
+<pre class="hljs"><code># Return true when every number satisfy
+
+const numbers = [15, 10, 20];
+
+const allAbove10 = numbers.every(number =&gt; number &gt;= 10); // true
+const allAbove15 = numbers.every(number =&gt; number &gt;= 15); // false
+</code></pre>
+<h4>Array.some(callback)</h4>
+<pre class="hljs"><code># Return true whenn at least on item satisfies the condition
+const numbers = [15, 10, 20];
+
+const someOver18 = numbers.some(number =&gt; number &gt;= 18); // true
+const someUnder10 = numbers.some(number =&gt; number &lt; 10); // false
 </code></pre>
 <h3>Objects</h3>
 <p>An object is a data type that allows you to group several variables together into one variable that contains keys and values.</p>
