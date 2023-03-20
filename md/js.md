@@ -618,6 +618,21 @@ Starting value is `1` because multiplying by `0` will return `0`. `1` is neutral
 - Forgetting to return
 - Wrong initialValue
 
+### Array destructing
+
+Array destructing is new to js, it considered **syntactic sugar**, meaning easy to read code. You can identify destructuring when you see the square brackets [] on the left side of the equal sign.
+
+```
+const dimensions = [20, 5]
+
+// create variables
+const [width, height] = dimensions;
+
+// log them
+console.log(width); //20
+console.log(height); //5
+```
+
 ### Objects
 
 An object is a data type that allows you to group several variables together into one variable that contains keys and values.

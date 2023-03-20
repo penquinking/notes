@@ -464,6 +464,17 @@ console.log(result); // 100
 <li>Forgetting to return</li>
 <li>Wrong initialValue</li>
 </ul>
+<h3>Array destructing</h3>
+<p>Array destructing is new to js, it considered <strong>syntactic sugar</strong>, meaning easy to read code. You can identify destructuring when you see the square brackets [] on the left side of the equal sign.</p>
+<pre class="hljs"><code>const dimensions = [20, 5]
+
+// create variables
+const [width, height] = dimensions;
+
+// log them
+console.log(width); //20
+console.log(height); //5
+</code></pre>
 <h3>Objects</h3>
 <p>An object is a data type that allows you to group several variables together into one variable that contains keys and values.</p>
 <pre class="hljs"><code>const user = {
