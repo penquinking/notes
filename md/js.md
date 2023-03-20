@@ -184,6 +184,11 @@ message.replaceAll(" ", "_"); // "You_are_welcome";
 console.log(message); // "You are welcome" (original string is not changed)
 ```
 
+#### Slug
+
+A slug is a string used to identify a certain item.
+E.g. `"Easy assembly dining table"` becomes `https://example.com/item/easy-assembly-dining-table`
+
 ### Numbers
 
 ```
@@ -499,6 +504,38 @@ Use glue to insert separators between items when converted to strings.
 const groceries = ["Apple", "Peach", "Tomato"];
 groceries.join("; "); // "Apple; Peach; Tomato"
 groceries.join(" . "); // "Apple . Peach . Tomato"
+```
+
+#### Array to string
+
+```
+const users = [{
+    id: 1,
+    name: "Sam Doe"
+}, {
+    id: 2,
+    name: "Alex Blue"
+}];
+
+const userNamesArray = users.map(user => user.name);
+console.log(userNamesArray); // ["Sam Doe", "Alex Blue"];
+
+const csv = userNamesArray.join(", ");
+console.log(csv); // "Sam Doe, Alex Blue"
+
+# or
+
+const csv = users.map(user => user.name).join(", ");
+console.log(csv); // "Sam Doe, Alex Blue"
+
+```
+
+```
+# Applying to html
+const html = `<ul>
+    ${users.map(user => `<li>${user.name}</li>`).join("")}
+    </ul>`;
+console.log(html); // <ul> <li>Sam Doe</li><li>Alex Blue</li> </ul>
 ```
 
 ### Objects

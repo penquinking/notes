@@ -144,6 +144,9 @@ const message = &quot;You are welcome.&quot;;
 message.replaceAll(&quot; &quot;, &quot;_&quot;); // &quot;You_are_welcome&quot;;
 console.log(message); // &quot;You are welcome&quot; (original string is not changed)
 </code></pre>
+<h4>Slug</h4>
+<p>A slug is a string used to identify a certain item.
+E.g. <code>&quot;Easy assembly dining table&quot;</code> becomes <code>https://example.com/item/easy-assembly-dining-table</code></p>
 <h3>Numbers</h3>
 <pre class="hljs"><code>Example of numbers in JS
 1
@@ -374,6 +377,33 @@ groceries.includes(&quot;Bread&quot;); // false
 <pre class="hljs"><code>const groceries = [&quot;Apple&quot;, &quot;Peach&quot;, &quot;Tomato&quot;];
 groceries.join(&quot;; &quot;); // &quot;Apple; Peach; Tomato&quot;
 groceries.join(&quot; . &quot;); // &quot;Apple . Peach . Tomato&quot;
+</code></pre>
+<h4>Array to string</h4>
+<pre class="hljs"><code>const users = [{
+    id: 1,
+    name: &quot;Sam Doe&quot;
+}, {
+    id: 2,
+    name: &quot;Alex Blue&quot;
+}];
+
+const userNamesArray = users.map(user =&gt; user.name);
+console.log(userNamesArray); // [&quot;Sam Doe&quot;, &quot;Alex Blue&quot;];
+
+const csv = userNamesArray.join(&quot;, &quot;);
+console.log(csv); // &quot;Sam Doe, Alex Blue&quot;
+
+# or
+
+const csv = users.map(user =&gt; user.name).join(&quot;, &quot;);
+console.log(csv); // &quot;Sam Doe, Alex Blue&quot;
+
+</code></pre>
+<pre class="hljs"><code># Applying to html
+const html = `&lt;ul&gt;
+    ${users.map(user =&gt; `&lt;li&gt;${user.name}&lt;/li&gt;`).join(&quot;&quot;)}
+    &lt;/ul&gt;`;
+console.log(html); // &lt;ul&gt; &lt;li&gt;Sam Doe&lt;/li&gt;&lt;li&gt;Alex Blue&lt;/li&gt; &lt;/ul&gt;
 </code></pre>
 <h3>Objects</h3>
 <p>An object is a data type that allows you to group several variables together into one variable that contains keys and values.</p>
