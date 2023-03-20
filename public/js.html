@@ -506,6 +506,31 @@ user.age = user.age + 1;
 
 
 </code></pre>
+<h4>Dynamic property</h4>
+<p><strong>Dot syntax</strong> does not work on property that is stored as variable or result of an expression (dynamic).
+<code>Object.keys(obj)</code> returns an array of keys.</p>
+<pre class="hljs"><code>const settings = {
+    theme: &quot;Dark&quot;,
+    version: &quot;2.4.1&quot;,
+    beta: false
+};
+
+const keys = Object.keys(settings);
+console.log(keys); // [&quot;theme&quot;, &quot;version&quot;, &quot;beta&quot;]
+keys.forEach(key =&gt; {
+    // log the value of every key dynamically
+    console.log(settings[key]);
+});
+
+</code></pre>
+<pre class="hljs"><code>const getUpperCasedProperties = course =&gt; {
+    return Object.keys(course).map(key =&gt; key.toUpperCase());
+}
+</code></pre>
+<pre class="hljs"><code>export const getTranslation = (language) =&gt; {
+    return translations.welcome[language];
+}
+</code></pre>
 <h3>Arrow functions</h3>
 <h4>Default parameters</h4>
 <p>In Js if an argument is not passed in the function parameters the code will not fail but instead passed as <code>undefined</code>.</p>

@@ -673,6 +673,39 @@ user.age = user.age + 1;
 
 ```
 
+#### Dynamic property
+
+**Dot syntax** does not work on property that is stored as variable or result of an expression (dynamic).
+`Object.keys(obj)` returns an array of keys.
+
+```
+const settings = {
+    theme: "Dark",
+    version: "2.4.1",
+    beta: false
+};
+
+const keys = Object.keys(settings);
+console.log(keys); // ["theme", "version", "beta"]
+keys.forEach(key => {
+    // log the value of every key dynamically
+    console.log(settings[key]);
+});
+
+```
+
+```
+const getUpperCasedProperties = course => {
+    return Object.keys(course).map(key => key.toUpperCase());
+}
+```
+
+```
+export const getTranslation = (language) => {
+    return translations.welcome[language];
+}
+```
+
 ### Arrow functions
 
 #### Default parameters
