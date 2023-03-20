@@ -451,6 +451,19 @@ const sum = grades.reduce((total, current) =&gt; {
 }, 0);
 </code></pre>
 <p><code>.reducer()</code> accepts 2 parameters: <code>reducer</code> and <code>initialValue</code>. <code>initialValue</code> is the same as <code>let sum = 0</code>.</p>
+<h4>Reduce: multiplication</h4>
+<pre class="hljs"><code>const result = numbers.reduce((total, current) =&gt; {
+    return total * current;
+}, 1);
+console.log(result); // 100
+</code></pre>
+<p>Starting value is <code>1</code> because multiplying by <code>0</code> will return <code>0</code>. <code>1</code> is neutral in multiplication.</p>
+<h4>Common mistakes</h4>
+<ul>
+<li>Syntax errors</li>
+<li>Forgetting to return</li>
+<li>Wrong initialValue</li>
+</ul>
 <h3>Objects</h3>
 <p>An object is a data type that allows you to group several variables together into one variable that contains keys and values.</p>
 <pre class="hljs"><code>const user = {

@@ -601,6 +601,23 @@ const sum = grades.reduce((total, current) => {
 
 `.reducer()` accepts 2 parameters: `reducer` and `initialValue`. `initialValue` is the same as `let sum = 0`.
 
+#### Reduce: multiplication
+
+```
+const result = numbers.reduce((total, current) => {
+    return total * current;
+}, 1);
+console.log(result); // 100
+```
+
+Starting value is `1` because multiplying by `0` will return `0`. `1` is neutral in multiplication.
+
+#### Common mistakes
+
+- Syntax errors
+- Forgetting to return
+- Wrong initialValue
+
 ### Objects
 
 An object is a data type that allows you to group several variables together into one variable that contains keys and values.
