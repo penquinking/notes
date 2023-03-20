@@ -633,6 +633,24 @@ console.log(width); //20
 console.log(height); //5
 ```
 
+### Array concatenation
+
+```
+# Concatenate/merge arrays' content using ...
+
+const lat = [5.234];
+const lng = [1.412];
+const point = [...lat, ...lng];
+console.log(point); // [5.234, 1.412];
+```
+
+```
+const items = ["Tissues", "Oranges"];
+
+const otherItems = [...items, "Tomatoes"];
+console.log(otherItems); // ["Tissues", "Oranges", "Tomatoes"]
+```
+
 ### Objects
 
 An object is a data type that allows you to group several variables together into one variable that contains keys and values.

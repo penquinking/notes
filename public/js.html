@@ -475,6 +475,19 @@ const [width, height] = dimensions;
 console.log(width); //20
 console.log(height); //5
 </code></pre>
+<h3>Array concatenation</h3>
+<pre class="hljs"><code># Concatenate/merge arrays' content using ...
+
+const lat = [5.234];
+const lng = [1.412];
+const point = [...lat, ...lng];
+console.log(point); // [5.234, 1.412];
+</code></pre>
+<pre class="hljs"><code>const items = [&quot;Tissues&quot;, &quot;Oranges&quot;];
+
+const otherItems = [...items, &quot;Tomatoes&quot;];
+console.log(otherItems); // [&quot;Tissues&quot;, &quot;Oranges&quot;, &quot;Tomatoes&quot;]
+</code></pre>
 <h3>Objects</h3>
 <p>An object is a data type that allows you to group several variables together into one variable that contains keys and values.</p>
 <pre class="hljs"><code>const user = {
