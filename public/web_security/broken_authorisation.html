@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chkkn notes</title>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+<body>
+  <a href="/">back</a>
+  <div class="markdown-body">
+    <h1>Broken Authorisation</h1>
+<p>Broken authorisation is a group of flaws occurring when granting user access privileges, this is due to ineffective implementation of authorisation checks.</p>
+<p><strong>Impact</strong></p>
+<ul>
+<li>access unauthorised content, change or delete content, perform functions, and assume full control of site administration.</li>
+<li>Example of breach, <a href="https://www.troyhunt.com/data-from-connected-cloudpets-teddy-bears-leaked-and-ransomed-exposing-kids-voice-messages/">CloudPets</a>.</li>
+</ul>
+<h2>Horizontal Authorisation Control</h2>
+<p>A user gaining access to other users’ accounts that possess equal privileges.</p>
+<p><strong>Example: IDOR</strong></p>
+<p>A user gaining access to other users’ accounts that possess equal privileges.</p>
+<pre class="hljs"><code>http://vulnerableapp.com/user/account?accountId=7800001
+http://vulnerableapp.com/user/account?accountId=7800002
+</code></pre>
+<h2>Vertical Authorisation Control</h2>
+<p>A user gaining access to higher level access, <em>upwards</em> use of access.</p>
+<pre class="hljs"><code>http://vulnerableapp.com/user/account
+http://vulnerableapp.com/admin/panel
+</code></pre>
+<p>This occurs when the application doesn’t check the role of the user in session to match with the role that is required to access the resources.</p>
+<h3>Preventing</h3>
+<ul>
+<li>define policy for what type of users can access the system and what users can and can’t do</li>
+<li>implement Role-based Access Control, to enforce boundaries</li>
+<li>don’t reinvent the wheel, implement Open Source Authorisation frameworks</li>
+</ul>
+<h3>Python</h3>
+<h4>Django</h4>
+<p><code>request.user</code> , if user not logged in attribute is set to <code>AnonymousUser</code>. check authentication with <code>User.is_authenticated</code>.</p>
+<pre class="hljs"><code>def admin_init(request):
+  if request.user.is_superuser:
+      # Do something for authenticated users.
+  else:
+      # Do something for anonymous users.
+</code></pre>
+<h4>Flask</h4>
+<p>Use <code>Flask-Session</code></p>
+<pre class="hljs"><code>from flask import Flask, session, abort
+from flask.ext.session import Session
+
+app = Flask(__name__)
+app.config.from_object(__name__)
+Session(app)
+
+@app.route('/admin/init')
+def admin_init():
+    if not session.get('user', 'is_superuser')
+      abort(401)
+    ...
+</code></pre>
+<h3>Node.js</h3>
+<h4>Express.js</h4>
+<p>Route to the admin page.</p>
+<pre class="hljs"><code>app.use(&quot;/admin&quot;, function (req, res) {
+  res.end(&quot;some administrative functionality here...&quot;);
+});
+</code></pre>
+<p>Middleware function that checks the user session.</p>
+<pre class="hljs"><code>function check_admin(req, res, next) {
+  const username = req.session.user_id;
+  if (!username) {
+    res.redirect(&quot;/login.html?message=Please+log+in&quot;);
+  } else {
+    const user = db.fetchUser(username);
+    if (user.is_admin) {
+      next(); // next middleware stage or handler
+    } else {
+      res.redirect(&quot;/login.html?message=Administrators+only&quot;);
+    }
+  }
+}
+</code></pre>
+<p>Adding <code>check_admin</code> to endpoint and router.</p>
+<pre class="hljs"><code>app.use(&quot;/admin&quot;, check_admin, function (req, res) {
+  res.end(&quot;some administrative functionality here...&quot;);
+});
+</code></pre>
+<h2>Authorisation Testing</h2>
+<p><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/05-Authorization_Testing/README.html">OWASP</a></p>
+<ul>
+<li>Directory Traversal File Include</li>
+<li>Bypassing Authorisation Schema</li>
+<li>Privilege Escalation</li>
+<li>Insecure Direct Object References</li>
+</ul>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

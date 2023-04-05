@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chkkn notes</title>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+</head>
+<body>
+  <a href="/">back</a>
+  <div class="markdown-body">
+    <h1>Broken Cryptography</h1>
+<p>Cryptography is the design of a secure communication system that is unreadable by a third-parties. Broken cryptography is when the system fails to perform this function.</p>
+<h2>Causes of Broken Cryptography</h2>
+<h3>Deprecated Algorithms</h3>
+<h4>Hash Functions</h4>
+<ul>
+<li>MD4 ✖️</li>
+<li>MD5 ✖️</li>
+<li>SHA-1 ✖️</li>
+</ul>
+<h4>Symmetric encryption</h4>
+<ul>
+<li>DES ✖️</li>
+<li>RC2 ✖️</li>
+<li>RC4 ✖️</li>
+<li>3DES ✖️</li>
+</ul>
+<h4>Asymmetric encryption and key exchange</h4>
+<ul>
+<li>RSA (768 bits) ✖️</li>
+<li>Diffie-Hellman (768 bits prime) ✖️</li>
+</ul>
+<h3>Inadequate implementation</h3>
+<ul>
+<li>incorrectly signed data</li>
+<li>signed, encrypted data is predictable</li>
+<li>accepting signed data without authentication</li>
+<li>low-entropy random number generation creates pattern and predictability</li>
+<li>secret extraction by the determination of power, caching location and computational timing</li>
+<li>poor key management</li>
+<li>small key space</li>
+<li>key/iv re-use</li>
+</ul>
+<h4>Mitigation</h4>
+<ul>
+<li>Do not implement deprecated algorithms.</li>
+<li>Implement security-community reviewed and accepted standards.</li>
+<li>Use well-known crypto libraries.</li>
+<li>Don’t reuse Initialisation Vectors (IVs), keys, or nonces.</li>
+<li>Use key management solutions; if possible, those tied with your operating system, hardware, or cloud provider.</li>
+<li>Get code reviewed.</li>
+</ul>
+<h3>Weak Hashing Algorithm</h3>
+<p>Hashing algorithm is used to sign digital certificates, create message authentication codes (MACs), hash passwords and other authentication cases.</p>
+<h4>Strong hash functions</h4>
+<ul>
+<li>Any minor change to the data input, even if the change constitutes only 1 byte, will result in an uncorrelated hash value; this is known as an &quot;avalanche effect&quot;.</li>
+<li>Pre-image Resistant: it should be computationally difficult to reverse a hash to its pre-hashed form.</li>
+<li>Second Pre-Image Resistant: it should be difficult for an attacker to find a different input with the same hash given an input and a hash.</li>
+<li>Collision Resistant: it should be difficult for an attacker to identify two different inputs of arbitrary length that result in identical hashes. <strong>Note</strong>: <em>difficult does not mean impossible - every hashing algorithm permits collisions... the goal is to make this as a remote reality as possible!</em></li>
+</ul>
+<h4>Password hashing requirements</h4>
+<ul>
+<li>Computing the hash must be computationally intense to avoid brute force and dictionary attacks.</li>
+<li>Data to be hashed should incorporate a <em>salt</em> so, even if the input is the same, the algorithm will produce a different hash. This protects against <a href="https://en.wikipedia.org/wiki/Rainbow_table">Rainbow Table attacks</a>.</li>
+</ul>
+<p><strong>Impact</strong><br>
+The impact of successful attacks on weak hashing algorithms can be disastrous, limited only by the value of data, and the imagination of the attacker in leveraging said data. There are countless examples of devastating data breaches exemplifying the fallout from poor hashing algorithm choice. For example, in 2016 (a full two years after the fact) Yahoo! announced they had been the victim of a gargantuan breach, the data of which constituted over 500 million Yahoo! accounts, with account details including; DOBs, unencrypted security questions and answers, and hashed passwords. Had the passwords been hashed by a strong and up to date hashing algorithm, they may have remained worthless data to the attacker. However, the algorithm used was a known weak hashing algorithm - MD5.</p>
+<h4>Prevention</h4>
+<p>Given their critical function as a security enabler for numerous online functions, it is imperative for organizations and individuals responsible for implementing functions utilizing hashing algorithms to ensure they are up to speed with the latest iteration. This is, in reality, the only solution to the problem that weak hashing algorithm use represents.</p>
+<p>Previously standard hashing functions that are nowadays considered <strong>very high risk or completely broken</strong> include:</p>
+<ul>
+<li><strong>MD5</strong>: known to be susceptible to collision attacks since the mid-'90s, and considered completely broken.</li>
+<li><strong>SHA-1</strong>: considered insecure against well-resourced adversaries since 2005 and formally deprecated for use by NIST in 2011.</li>
+<li><strong>RIPEMD &amp; RIPEMD-128</strong>: deemed insecure, with a <a href="https://eprint.iacr.org/2004/199">reported collision</a> occurring in 2004.</li>
+<li><strong>Whirlpool</strong>: a <a href="https://www.cosic.esat.kuleuven.be/fse2009/slides/2402_1150_Schlaeffer.pdf">rebound attack presented collisions</a> in 2009.</li>
+</ul>
+<p>Current hash functions deemed robust and accepted as standard include:</p>
+<ul>
+<li><strong>RIPEMD-160/256/320</strong>: multiple variants with differing levels of security, although all considered robust.</li>
+<li><strong>BLAKE2/3</strong>: purportedly faster than SHA-1/2/3 and immune to length extension.</li>
+<li><strong>SHA-2</strong>: all variants publicly resistant to collision attacks, and most variants resistant to <a href="https://crypto.stackexchange.com/questions/3978/understanding-the-length-extension-attack">length extension attacks</a>.</li>
+<li><strong>SHA-3</strong>: the most recent iteration of the SHA series; publicly resistant to collision and length extension attacks.</li>
+</ul>
+<p>When the hash function is used to hash passwords, consider the use of more suitable algorithms, such as:</p>
+<ul>
+<li><strong>bcrypt</strong>: the default password hash algorithm used in many systems.</li>
+<li><strong>scrypt</strong>: an algorithm specifically designed to make the hashing computationally intense so to mitigate the bruteforcing.</li>
+<li><strong>argon2</strong>: the winner of the 2015 Password Hashing Competition; the computational intensiveness of the process can be fine-tuned.</li>
+<li><strong>PBKDF2</strong>: a key derivarion algorithm recommended by NIST.</li>
+</ul>
+<p>In any case, make sure to use an appropriate <em>work factor</em>, i.e., a high enough iteration count.</p>
+<h2>Testing</h2>
+<p>Verify that known weak hashing algorithms (i.e. MD5, SHA1, etc.) are not used unless required for backwards compatibility.</p>
+<ul>
+<li><strong>OWASP ASVS</strong>: <a href="https://github.com/OWASP/ASVS/releases/download/v4.0.2_release/OWASP.Application.Security.Verification.Standard.4.0.2-en.pdf">6.2.5</a></li>
+<li><strong>OWASP Testing Guide</strong>: <a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/09-Testing_for_Weak_Cryptography/04-Testing_for_Weak_Encryption.html">Testing for Weak Encryption</a></li>
+</ul>
+<h2>References</h2>
+<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">OWASP - Password Storage Cheat Sheet</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">Wikipedia - Cryptographic Hash Function</a></p>
+<p><a href="https://docs.digicert.com/certificate-tools/discovery-user-guide/tlsssl-certificate-vulnerabilities/weak-hashing-algorithm/">Digicert - Weak Hashing Algorithm</a></p>
+<p><a href="https://www.mscs.dal.ca/~selinger/md5collision/">Dalhousie University - MD5 Collission Demo</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Secure_Hash_Algorithms">Wikipedia - Secure Hash Algorithms</a></p>
+<p><a href="https://crypto.stackexchange.com/questions/3978/understanding-the-length-extension-attack">Cryptography Stack Exchange - Understanding the Length Extension Attack</a></p>
+<p><a href="https://eprint.iacr.org/2004/199.pdf">IACR - Collisions for Hash Functions</a></p>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
