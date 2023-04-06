@@ -9,6 +9,9 @@
     "highlight.js": "^11.7.0",
     "markdown-it": "^13.0.1"
   },
+  "scripts":{
+    "deploy": "node index.js && git add . && git commit -m 'notes added' && git push origin main && npx wrangler pages publish --project-name notes /Users/kimnguyen/Documents/notes/public"
+  },
   "bin": {
     "publish": "./publish.js"
   }
