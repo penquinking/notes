@@ -44,3 +44,6 @@ git branch -D <branchName>
 git push origin --delete <branchName>
 
 ```
+## Authenticating github cli
+Generate personal token [https://github.com/settings/personal-access-tokens/new](https://github.com/settings/personal-access-tokens/new)
+Login with username and token as password.
