@@ -14,3 +14,13 @@ yarn remove
 # install all dependencies defined in package.json
 yarn install
 ```
+## CLI commands
+```json
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node index.js",
+  }
+}
+```
