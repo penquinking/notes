@@ -1,4 +1,7 @@
 # Git
+```
+git config --global user.name "Mona lisa"
+```
 
 ```
 git init
