@@ -52,6 +52,18 @@ Use to gather information about the target domain. [https://www.netcraft.com/](h
 - Site technology
 
 ### DNS Recon
+Records associated with a domain.
+Looking for:
+- Nameserver
+- A record
+- AAAA record
+- MX record
+
+**dnsrecon**  
+`dnsrecon -d zonetransfer.me`
+
+**DNSdumpster**
+[https://dnsdumpster.com/](https://dnsdumpster.com/)
 
 ### WAF with wafwoof
 
