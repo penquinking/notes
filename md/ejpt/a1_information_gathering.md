@@ -43,7 +43,13 @@ Information to look for:
 
 ### Footprinting with Netcraft
 
-Use to gather information about the target domain
+Use to gather information about the target domain. [https://www.netcraft.com/](https://www.netcraft.com/)
+- Background
+- Network
+- SSL/TLS
+- Hosting history
+- Web trackers
+- Site technology
 
 ### DNS Recon
 
