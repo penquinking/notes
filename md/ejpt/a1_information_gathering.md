@@ -62,7 +62,7 @@ Looking for:
 **dnsrecon**  
 `dnsrecon -d zonetransfer.me`
 
-**DNSdumpster**
+**DNSdumpster**  
 [https://dnsdumpster.com/](https://dnsdumpster.com/)
 
 ### WAF with wafwoof
