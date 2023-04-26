@@ -85,10 +85,26 @@ sublist3r -d hackersploit.org -e google, yahoo
 
 sublist3r -d hackersploit.org
 ```
-*Note: there maybe no results because the search engine are blocking the requests*
+*Note: there maybe no results because the search engines has rate limiting*
 
 ### Google Dorks
+```
+site:ine.com
 
+site:ine.com inurl:admin
+
+site:*.ine.com
+
+site:*.ine.com intitle:admin
+
+# directory listing
+intitle: index of
+
+cache:ine.com
+
+inurl:auth_user_file.txt
+```
+[https://archive.org/web/](https://archive.org/web/)
 ### Email Harvesting with theHarvester
 
 ### Leaked Password Databases
