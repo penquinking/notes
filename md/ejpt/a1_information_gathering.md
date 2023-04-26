@@ -66,6 +66,18 @@ Looking for:
 [https://dnsdumpster.com/](https://dnsdumpster.com/)
 
 ### WAF with wafwoof
+Identify if web application is protected by a firewall.
+
+```
+# list out the WAF that the tool can detect
+wafw00f -l
+
+# testing single waf instance
+wafw00f hackertube.net
+
+# testing all waf instances
+wafw00f hackertube.net -a
+```
 
 ### Subdomain Enumeration with Sublist3r
 

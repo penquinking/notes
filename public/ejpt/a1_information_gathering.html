@@ -68,6 +68,16 @@ Looking for:</p>
 <p><strong>DNSdumpster</strong><br>
 <a href="https://dnsdumpster.com/">https://dnsdumpster.com/</a></p>
 <h3>WAF with wafwoof</h3>
+<p>Identify if web application is protected by a firewall.</p>
+<pre class="hljs"><code># list out the WAF that the tool can detect
+wafw00f -l
+
+# testing single waf instance
+wafw00f hackertube.net
+
+# testing all waf instances
+wafw00f hackertube.net -a
+</code></pre>
 <h3>Subdomain Enumeration with Sublist3r</h3>
 <h3>Google Dorks</h3>
 <h3>Email Harvesting with theHarvester</h3>
