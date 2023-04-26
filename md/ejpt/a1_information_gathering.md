@@ -68,7 +68,7 @@ Looking for:
 ### WAF with wafwoof
 Identify if web application is protected by a firewall.
 
-```
+```bash
 # list out the WAF that the tool can detect
 wafw00f -l
 
