@@ -85,7 +85,7 @@ sublist3r -d hackersploit.org -e google, yahoo
 
 sublist3r -d hackersploit.org
 ```
-**Note: there maybe no results because the search engine are blocking the requests**
+*Note: there maybe no results because the search engine are blocking the requests*
 
 ### Google Dorks
 
