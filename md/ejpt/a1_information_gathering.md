@@ -103,9 +103,18 @@ intitle: index of
 cache:ine.com
 
 inurl:auth_user_file.txt
+
+inurl:wp-config.bak
 ```
 [https://archive.org/web/](https://archive.org/web/)
+
+[https://www.exploit-db.com/google-hacking-database](https://www.exploit-db.com/google-hacking-database)
+
 ### Email Harvesting with theHarvester
+[https://github.com/laramies/theHarvester](https://github.com/laramies/theHarvester)
+```
+theHarvester -d hackersploit.org -b rapiddns
+```
 
 ### Leaked Password Databases
 
