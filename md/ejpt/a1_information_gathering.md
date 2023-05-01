@@ -117,6 +117,8 @@ theHarvester -d hackersploit.org -b rapiddns
 ```
 
 ### Leaked Password Databases
+[https://haveibeenpwned.com/](https://haveibeenpwned.com/)
+
 
 ## Active Information Gathering
 
