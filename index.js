@@ -76,7 +76,7 @@ function createIndexHtml(renderMdFiles){
     <html>
     <head>
       <title>Chkkn notes</title>
-      <link rel="stylesheet" type="text/css" href="/css/style.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
       <h2>notes</h2>
@@ -114,8 +114,8 @@ function copyFuzzyJs(){
 
 function copyStyleCss(){
   // Construct the source and destination file paths
-  const sourceFilePath = path.join(__dirname, 'css', 'style.css');
-  const destFilePath = path.join(__dirname, 'public', 'css', 'style.css');
+  const sourceFilePath = path.join(__dirname, 'style.css');
+  const destFilePath = path.join(__dirname, 'public', 'style.css');
 
   // Copy the file to the public directory
   fs.copyFile(sourceFilePath, destFilePath, (err) => {
