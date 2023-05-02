@@ -158,7 +158,7 @@ dnsenum zonetransfer.me
 ```
 
 **fierce**  
-[https://github.com/mschwager/fierce](https://github.com/mschwager/fierce)
+[https://github.com/mschwager/fierce](https://github.com/mschwager/fierce)  
 Use to actively enumerate sub domains (bruteforce).
 ```
 fierce --domain zonetransfer.me
