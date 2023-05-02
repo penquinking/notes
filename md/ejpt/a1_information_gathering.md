@@ -152,12 +152,17 @@ dig axfr @nsztm1.digi.ninja zonetransfer.me
 dnsenum zonetransfer.me
 ```
 
-
 **Host files**  
 ```
 /etc/hosts
 ```
 
+**fierce**  
+[https://github.com/mschwager/fierce](https://github.com/mschwager/fierce)
+Use to actively enumerate sub domains (bruteforce).
+```
+fierce --domain zonetransfer.me
+```
 
 ### Host Discovery with Nmap
 
