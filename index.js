@@ -76,6 +76,7 @@ function createIndexHtml(renderMdFiles){
     <html>
     <head>
       <title>Chkkn notes</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
       <h2>notes</h2>
