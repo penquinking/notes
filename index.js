@@ -133,6 +133,7 @@ function main() {
   const renderedFiles = renderMdFiles(mdFiles);
   createIndexHtml(renderedFiles);
   copyFuzzyJs();
+  copyStyleCss();
 }
 
 main();
