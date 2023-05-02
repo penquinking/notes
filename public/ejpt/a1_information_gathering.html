@@ -119,11 +119,23 @@ DNS Records - A, AAAA, NS, MX, CNAME, TXT, HINFO, SOA, SRC, PTR</p>
 <li>Enumerating DNS records</li>
 <li>Probe DNS server to provide DNS records of specific domain</li>
 </ul>
-<p><strong>DNS Zone Transfer</strong></p>
+<p><strong>DNS Zone Transfer</strong>
+<a href="https://digi.ninja/projects/zonetransferme.php">https://digi.ninja/projects/zonetransferme.php</a>.
+DNS zone transfer uses the AXFR protocol, it copies DNS records to another DNS servers.
+Security problems with DNS Zone Transfer such information can be leaked.</p>
+<p><em>Note</em><br>
+Zone transfer needs to be enabled.</p>
+<pre class="hljs"><code># Getting a copy from the primary server
+dig axfr @nsztm1.digi.ninja zonetransfer.me
+</code></pre>
 <ul>
-<li>DNS server admin wants to copy or transer zone files from one server to another.</li>
-<li>Misconfigured and left unsecured can be abused by attacker, provider pentester with holistic view of an org's network layout, internal network addresses may be found on org's DNS servers.</li>
+<li>SOA - primary name server, contact details, serial number for the domain(if date is check regualarly a change could indicate some activitn in the company).</li>
+<li>LOC - lcoation stored as latitude/longitude. Convert using <a href="https://www.fcc.gov/media/radio/dms-decimal">https://www.fcc.gov/media/radio/dms-decimal</a>.</li>
+<li>SRV - often used for VOIP setups to indicate SIP servers.</li>
+<li>PTR - maps ip address back to domain</li>
 </ul>
+<pre class="hljs"><code>dnsenum zonetransfer.me
+</code></pre>
 <p><strong>Host files</strong></p>
 <pre class="hljs"><code>/etc/hosts
 </code></pre>

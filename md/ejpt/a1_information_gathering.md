@@ -131,8 +131,27 @@ DNS Records - A, AAAA, NS, MX, CNAME, TXT, HINFO, SOA, SRC, PTR
 - Probe DNS server to provide DNS records of specific domain
 
 **DNS Zone Transfer**
-- DNS server admin wants to copy or transer zone files from one server to another.
-- Misconfigured and left unsecured can be abused by attacker, provider pentester with holistic view of an org's network layout, internal network addresses may be found on org's DNS servers.
+[https://digi.ninja/projects/zonetransferme.php](https://digi.ninja/projects/zonetransferme.php).
+DNS zone transfer uses the AXFR protocol, it copies DNS records to another DNS servers.
+Security problems with DNS Zone Transfer such information can be leaked.
+
+*Note*  
+Zone transfer needs to be enabled.
+
+```
+# Getting a copy from the primary server
+dig axfr @nsztm1.digi.ninja zonetransfer.me
+```
+
+* SOA - primary name server, contact details, serial number for the domain(if date is check regualarly a change could indicate some activitn in the company). 
+* LOC - lcoation stored as latitude/longitude. Convert using [https://www.fcc.gov/media/radio/dms-decimal](https://www.fcc.gov/media/radio/dms-decimal).
+* SRV - often used for VOIP setups to indicate SIP servers. 
+* PTR - maps ip address back to domain
+
+```
+dnsenum zonetransfer.me
+```
+
 
 **Host files**  
 ```
