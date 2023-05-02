@@ -112,6 +112,20 @@ inurl:wp-config.bak
 <p><a href="https://haveibeenpwned.com/">https://haveibeenpwned.com/</a></p>
 <h2>Active Information Gathering</h2>
 <h3>DNS Zone Transfers</h3>
+<p>DNS Server - Cloudflare(1.1.1.1), Google(8.8.8.8)
+DNS Records - A, AAAA, NS, MX, CNAME, TXT, HINFO, SOA, SRC, PTR</p>
+<p><strong>DNS interrogation</strong></p>
+<ul>
+<li>Enumerating DNS records</li>
+<li>Probe DNS server to provide DNS records of specific domain</li>
+</ul>
+<p><strong>DNS Zone Transfer</strong></p>
+<ul>
+<li>DNS server admin wants to copy or transer zone files from one server to another.</li>
+<li>Misconfigured and left unsecured can be abused by attacker, provider pentester with holistic view of an org's network layout, internal network addresses may be found on org's DNS servers.</li>
+</ul>
+<p><strong>Host files</strong>
+/etc/hosts</p>
 <h3>Host Discovery with Nmap</h3>
 <h3>Port Scanning with Nmap</h3>
 

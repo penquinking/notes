@@ -123,6 +123,20 @@ theHarvester -d hackersploit.org -b rapiddns
 ## Active Information Gathering
 
 ### DNS Zone Transfers
+DNS Server - Cloudflare(1.1.1.1), Google(8.8.8.8)
+DNS Records - A, AAAA, NS, MX, CNAME, TXT, HINFO, SOA, SRC, PTR
+
+**DNS interrogation** 
+- Enumerating DNS records
+- Probe DNS server to provide DNS records of specific domain
+
+**DNS Zone Transfer**
+- DNS server admin wants to copy or transer zone files from one server to another.
+- Misconfigured and left unsecured can be abused by attacker, provider pentester with holistic view of an org's network layout, internal network addresses may be found on org's DNS servers.
+
+**Host files**
+  /etc/hosts
+  
 
 ### Host Discovery with Nmap
 
