@@ -111,6 +111,21 @@ function copyFuzzyJs(){
     }
   });
 }
+
+function copyStyleCss(){
+  // Construct the source and destination file paths
+  const sourceFilePath = path.join(__dirname, 'css', 'style.css');
+  const destFilePath = path.join(__dirname, 'public', 'css', 'style.css');
+
+  // Copy the file to the public directory
+  fs.copyFile(sourceFilePath, destFilePath, (err) => {
+    if (err) {
+      console.error(`Failed to copy file: ${err}`);
+      return;
+    }
+  });
+}
+
   
 function main() {
   const directoryPath = 'md';
