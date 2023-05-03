@@ -165,5 +165,17 @@ fierce --domain zonetransfer.me
 ```
 
 ### Host Discovery with Nmap
+Discover devices on the network.
+Ping scan, no port scan.
+
+```
+# -sn IMCP echo
+
+sudo nmap -sn 192.168.0.0/24
+```
+```
+# uses arp requests
+sudo netdiscover -i en0 -r 192.168.0.0./24
+```
 
 ### Port Scanning with Nmap
