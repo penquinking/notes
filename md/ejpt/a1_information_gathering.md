@@ -179,3 +179,18 @@ sudo netdiscover -i en0 -r 192.168.0.0./24
 ```
 
 ### Port Scanning with Nmap
+nmap default scan: SYN scan, 1000 common ports
+Windows will block icmp pings.
+
+```
+# Peform port scan don't ping
+nmap -Pn 192.168.0.134
+
+# Specify port
+nmap -Pn -p 80 192.168.0.134
+
+# All ports
+nmap -Pn -p- 192.168.0.134
+```
+
+
