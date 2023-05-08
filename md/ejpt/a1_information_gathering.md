@@ -191,6 +191,26 @@ nmap -Pn -p 80 192.168.0.134
 
 # All ports
 nmap -Pn -p- 192.168.0.134
+
+# Port range
+nmap -Pn -p1-1000 192.168.0.134
+
+# Fast scan 100 common ports
+nmap -Pn -F 192.168.0.134
 ```
+```
+# udp port scan
+nmap -Pn -sU 192.168.0.134
+
+# verbose
+nmap -Pn -sU 192.168.0.134 -v
+
+# service version
+nmap -Pn -F -sV 192.168.0.134
+
+# operating system
+nmap -Pn -O 192.168.0.134
+```
+
 
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chkkn notes</title>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
+
+</head>
+<body>
+  <a href="/">back</a>
+  <div class="markdown-body">
+    <h1>Application Security Foundations</h1>
+<p>Set goals - create plan around that goal.</p>
+<h2>Application Security Goals</h2>
+<ul>
+<li>Inventory: APIs, Web Apps, Serverless.</li>
+<li>Finding Vulnerabilities: Find vulneability in running code, written code, 3rd party code (libraries, git packages, plugins). Ability to quickly release fixes.</li>
+<li>The knowledge to fix what you have found: Knowledge to fix security bugs that the teams find. Developer education, supporting documentation. Moderninise the processes and ways on how developers think.</li>
+<li>Effective tooling: Selecting tools to meet your specific needs than automating them. Automate as much as possible e.g. running scans, devops release pipelines</li>
+<li>Education and Reference Materials: Techinical library, Formal Training, Lunch &amp; learns, Adovacy Program, Security Champions Program</li>
+<li>Giving Developers Security Tools: Putting the power into the software developer's hands, giving them the security tool, writing own tools and libraries for your developer.</li>
+<li>Security Activities during SDLC: Have one or more security activities at each stage of the SDLC.
+<ol>
+<li>Requirements. e.g. past these checks from the tools we have</li>
+<li>Design. e.g. Book a meeting and go through the design (encryption, authentication). Suggest some risks that you potentially see.</li>
+<li>Coding</li>
+<li>Testing</li>
+<li>Deployment
+Security sprint, partnership model.</li>
+</ol>
+</li>
+<li>Incident Response: Ensure incident response team understands application security. Implement tooling to prevent or detect.</li>
+<li>Continous Improvement: Emphasise the efficiency of the entire system. Have really fast feedback. Every three months looking at IR reports, looking for patterns and trends. Talking to dev team for area to improve. Is the process working. Once every 3 months, quarter doing a feedback loop.</li>
+</ul>
+<h3>Example 1</h3>
+<p>To measure current security posture and addressa any fires. There are always problems with it and there are legacies.</p>
+<ol>
+<li>Scan all of WebApps: with new Dast tools.</li>
+<li>Assess Top 3 vulnerabilites.</li>
+<li>Provide a lesson on the top 3.</li>
+<li>Work with teams to eliminate critical bugs. Explain the risks. Be persuasive, communicate clearly.</li>
+<li>Eliminate the critical &amp; high vulenerabilities. (6 months).</li>
+</ol>
+<h3>Example 2</h3>
+<p>Getting everyone on the same playing field. Create repeateable and automated processes that not interupt with the developers.</p>
+<ol>
+<li>Code it the same repository. AppSec team can run tests  on the code. Gitlab, GitHub, Bit Bucket.</li>
+<li>Setup Weekly Software Composition Analysis + secret scanning (hash, password, connection string, API key), tells out of date frameworks &amp; libraries and find security vulnerability.</li>
+</ol>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
