@@ -33,3 +33,17 @@ Getting everyone on the same playing field. Create repeateable and automated pro
 
 1. Code it the same repository. AppSec team can run tests  on the code. Gitlab, GitHub, Bit Bucket. 
 2. Setup Weekly Software Composition Analysis + secret scanning (hash, password, connection string, API key), tells out of date frameworks & libraries and find security vulnerability. 
+3. Setup Weekly SAST scans. Tune tool. 
+4. Automate tickets. Beware of false-positives. 
+5. Penetration test of three mission critical applications.
+
+### Example 3
+Spreading security awareness and promoting positive culture change. 
+1. Security Champion Program. Train them on code review and threat modelling. 
+2. Review each pull request for security. 
+3. Secure code training for everyone. 
+4. Provide documentation support.
+
+## AppSec Activities
+TACTICS: The acutal means used to gain an objective. (AppSec activities that we do to get to our goals). 
+STRATEGY: The overall campaign plan. (Goals - the final place you want to be).
