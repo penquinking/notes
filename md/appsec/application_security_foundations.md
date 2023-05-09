@@ -74,3 +74,22 @@ Methodology
 Usually paired with Static Application Security Testing (SAST). 
 All you do is review the security controls where security problems might happen. 
 E.g. login screen, password, authentication, make the some sort of security control is there and is implemented correctly. 
+
+### Software Composition Analysis
+SCA focuses on the third party components, libraries, frameworks, plugins, packages. 
+Can manually google the third party components or use tool. 
+
+### Penetration Testing
+Set out a scope on what to test and attempt to find as many vulnerabilities using tools and manual techniques, try to exploit to prove if its vulnerable. 
+
+### Developer Education and Advocacy
+Education Program: Educate developers about security, what you expect from them in regards from security. What are the policies to be followed, laws to be followed (GDPR, HIPPA, PCI DSS), security design, security architecture, threat modelling. 
+
+Advocacy Program: Doing culture change in the organisation so people think security is more fun, absolutely necessary, a part of quality. 
+
+### Responsible Disclosure and Bug Bounties
+Responsible disclosure/coordinated disclosure: penetration tester, security researcher finding security problems or bugs and reporting it to the vendor. 
+
+Katie Missouri invented bug bounties, which is creating a copy of your system and inviting researchers, ethical hackers, penetration testers to test and if they find something they get paid. 
+
+### Helpful Policies, Standards and Guildlines
