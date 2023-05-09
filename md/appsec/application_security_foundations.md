@@ -47,3 +47,30 @@ Spreading security awareness and promoting positive culture change.
 ## AppSec Activities
 TACTICS: The acutal means used to gain an objective. (AppSec activities that we do to get to our goals). 
 STRATEGY: The overall campaign plan. (Goals - the final place you want to be).
+
+### Vulnerability Assessment scans
+
+Quick Scan\QA: commonly called Dynamic Application Security Testing(DAST), Web proxy, Web App Scanner. Automated tool that interact with the web app and give you results. 
+
+Vulnerability/Security assessment: Talking to people, assessing the whole system, running multiple tools and verifying all the security components.
+
+### Threat Modelling
+Conversation between a security person, product owner/business owner/clients, lead dev etc.
+What are the threats to the system.  Try to **mitigate**, **reduce** or **accept** those threats. 
+Threat modelling started with Microsoft. Book: Threat Modeling: Designing for Security by Adam Shostack. 
+
+Informal threat modelling
+- What does this app do?
+- What could go wrong?
+- What keeps you up at night?
+- How would you hack your app?
+
+Methodology
+- S.T.R.I.D.E
+- P.A.S.T.A (Risk & Governance)
+- Attack Trees
+
+### Secure Code Review
+Usually paired with Static Application Security Testing (SAST). 
+All you do is review the security controls where security problems might happen. 
+E.g. login screen, password, authentication, make the some sort of security control is there and is implemented correctly. 
